@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Dark gradient background */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 20px;
+    color: #ffffff; /* White text inside the container */
+    text-align: center; /* Center-align all text inside the container */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for the glass effect */
+}
+
+.chat-container h1 {
+    margin: 0 0 20px 0; /* Add spacing below the title */
+    font-size: 24px; /* Adjust font size for better visibility */
+    color: #ffffff; /* White text for the title */
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #aaaaaa; /* Slightly darker gray border for separation */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #000000; /* Black background for the chat box */
+    color: #ffffff; /* White text for chat messages */
+}
+
+#chat-box .user-message strong {
+    color: hwb(0 69% 31%); /* Green for user name */
+}
+
+#chat-box .bot-message strong {
+    color: hwb(0 69% 31%); /* Red for bot name */
+}
+
+.input-container {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    background: #ffffff; /* White background for input */
+    color: #333333; /* Dark gray text for input */
+}
+
+#user-input::placeholder {
+    color: #aaaaaa; /* Light gray placeholder text */
+}
+
+#send-btn, #restart-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#send-btn {
+    background-color: hwb(0 69% 31%); /* Green for positive action */
+    color: white;
+}
+
+#send-btn:hover {
+    background-color: hwb(0 0% 100%); /* Slightly darker green on hover */
+}
+
+#restart-btn {
+    background-color: hwb(0 69% 31%); /* Red for reset action */
+    color: white;
+}
+
+#restart-btn:hover {
+    background-color: hsl(0, 0%, 0%); /* Slightly darker red on hover */
+}
+
+/* Scrollbar styling for the chat box */
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background: #555555; /* Dark gray scrollbar thumb */
+    border-radius: 5px;
+}
+
+#chat-box::-webkit-scrollbar-thumb:hover {
+    background: #777777; /* Slightly lighter gray on hover */
+}
+
+#help-btn {
+    background-color: #2196f3; /* Blue for help action */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#help-btn:hover {
+    background-color: hsla(209, 13%, 68%, 0.486); /* Slightly darker blue on hover */
+}
+.input-container {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+#help-btn {
+    background-color: #818c96a2; /* Blue for help action */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1; /* Ensure buttons are evenly spaced */
+}
+
+#help-btn:hover {
+    background-color: hwb(0 1% 99%); /* Slightly darker blue on hover */
+}
+
+#background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the chatbot */
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Fallback gradient */
+}
